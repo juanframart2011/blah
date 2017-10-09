@@ -1,0 +1,991 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "brandon-grotesque-regular", Arial, Helvetica, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+strong,
+b {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+section.hero {
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    min-height: 600px;
+    padding-bottom: 350px;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center;
+    text-align: center;
+}
+
+section.menu {
+    background-color: #d83f87;
+    padding: 50px 0px;
+    padding-top: 0px;
+    margin: auto;
+    width: 320px;
+    text-align: left;
+    top: 0px;
+    float: right;
+    position: relative;
+    transition: all linear 0.5;
+}
+
+section.menu ul {
+    text-align: left;
+    padding-left: 60px;
+}
+
+section.menu ul {
+    font-family: "brandon-grotesque-bold";
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+section.menu ul li{
+    position: relative;
+
+}
+
+section.menu ul li:before{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    height: 1px;
+    background-color: #FFF;
+    width: 0px;
+    display: inline-block;
+    content: "";
+    transition: all cubic-bezier(0.4, 0, 1, 1) 0.3s;
+}
+
+section.menu ul li:hover:before{
+    width: 16px;
+    left: -24px;
+    transition: all cubic-bezier(0.74, 0.02, 0.24, 0.95) 0.3s;
+    
+}
+
+section.menu img {
+    width: 200px;
+    margin-left: 50px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+section.menu.active {
+    background-color: #120d2e;
+    display: inline-block;
+    width: 100%;
+    position:  fixed;
+    padding: 0px;
+    
+    top: 0px;
+    max-width: 1200px;
+    max-height: 100px;
+    overflow: hidden;
+    left: 0px;
+    text-align: center;
+    z-index: 1000000;
+    transition: all linear 0.5;
+}
+
+@media (min-width:1200px){
+    section.menu.active {
+        left: calc(50% - 600px);
+    }
+}
+
+section.menu.active ul {
+    text-align: left;
+    padding-left: 0px;
+    padding-left: 20px;
+    float: right;
+    margin: 0px;
+    height: 80px;
+    background-color: #d83f87;
+    width: 200px;
+}
+
+section.menu.active ul li{
+    font-family: "brandon-grotesque-bold";
+    font-size: 12px;
+    line-height: 18px;
+    width: 80px;
+    display: inline-block;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+section.menu.active img {
+    width: 60px;
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+}
+section.menu img.r-head{
+    display: none;
+}
+section.menu.active img.r-head{
+    width: 250px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+section.more {
+    width: calc(100% - 400px);
+    display: inline-block;
+    text-align: center;
+}
+
+section.intro {
+    background-color: #fde7e1;
+    margin-top: -300px;
+    min-height: 440px;
+    max-width: 1000px;
+    margin-left: calc( 10%);
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+section.intro .video {
+    width: 100%;
+    max-width: 580px;
+    height: 316.8px;
+    margin-top: -100px;
+    display: inline-block;
+    background-color: #000;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+}
+.video iframe{
+    width: 100%;
+    height: 100%;
+}
+
+section.intro .video img {
+    margin-top: 100px;
+    width: 100px;
+}
+
+section.intro p {
+    position: relative;
+    font-family: "brandon-grotesque-bold";
+    font-size: 20px;
+    line-height: 25px;
+    padding: 20px 50px;
+}
+
+section.intro p:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 100px;
+    height: 2px;
+    background-color: #121212;
+    left: calc(50% - 50px);
+}
+
+body {
+    text-align: center;
+}
+
+.block {
+    margin: auto;
+    max-width: 1200px;
+    width: calc( 100% - 40px);
+    text-align: left;
+    padding: 20px 20px;
+    margin-bottom: 40px;
+}
+
+.block.pless {
+    padding: 0px;
+    width: calc( 100%);
+}
+
+.block.mbless {
+    margin-bottom: 0px;
+}
+
+.block h1 {
+    font-family: "brandon-grotesque-bold";
+    font-size: 30px;
+}
+
+.cardsHolder {
+    width: calc( 100% - 200px);
+    padding: 0px 100px;
+    position: relative;
+    
+    margin-top: 30px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.cardsHolder .left,
+.cardsHolder .right {
+    position: absolute;
+    left: 0px;
+    width: 100px;
+    z-index: 100;
+    background-color: #FFF;
+    height: 200px;
+    display: inline-block;
+}
+
+.cardsHolder .right {
+    left: auto;
+    right: 0px;
+}
+
+.cardsHolder .left:after,
+.cardsHolder .right:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: calc( 50% - 20px);
+    height: 40px;
+    width: 40px;
+    border-left: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
+    transform: rotate(45deg);
+    transition: all linear 0.1s;
+}
+
+.cardsHolder .left:hover:after {
+    left: 10px;
+    transition: all linear 0.1s;
+    border-width: 2px;
+}
+
+.cardsHolder .right:after {
+    left: auto;
+    right: 20px;
+    transform: rotate(-135deg);
+    
+}
+
+.cardsHolder .right:hover:after {
+    right: 10px;
+    border-width: 2px;
+    
+}
+
+.cardsHolder .cards {
+    position: absolute;
+    left: 0px;
+    transition: all linear 0.5s;
+}
+
+.cardsHolder .cards .card {
+    width: calc( 300px - 50px);
+    margin: 0px;
+    float: left;
+    text-align: center;
+    display: block;
+}
+
+.cardsHolder .cards .card img {
+    width: 200px;
+    height: 200px;
+}
+
+.cardsHolder .cards .card:first-of-type {
+    margin-left: 100px;
+}
+
+.cardsHolder .cards .card:nth-child(4n) {
+    margin-right: 100px;
+}
+
+@media(max-width:600px){
+
+    .cardsHolder .cards .card:first-of-type {
+        margin-left: 80px;
+    }
+    .cardsHolder .cards .card {
+        width: calc( 100vw - 200px );
+    }
+}
+
+.personal {
+    background-color: #fde7e1;
+    font-family: "brandon-grotesque-bold";
+    font-size: 30px;
+    text-align: center;
+}
+
+.personal > .block > p {
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+    margin: 30px auto;
+    margin-bottom: 100px;
+}
+
+.form{
+    text-align: left;
+    padding-top: 30px;
+    margin-bottom: 100px;
+}
+
+.form p{
+    width: calc( 30% - 20px );
+    margin-right: 20px;
+    display: inline-block;
+    float: left;
+}
+
+.inpHolder{
+    width: 70%;
+    display: inline-block;
+    text-align: right;
+}
+.inpHolder .inp{
+    display: inline-block;
+    width: calc( 50% - 30px );
+    margin-right: 20px;
+    position: relative;
+    max-width: 300px;
+    text-align: left;
+}
+
+.inpHolder .inp input[type=text]{
+    -webkit-appearance: none;
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    color: #212121;
+    padding: 0px;
+    font-family: "brandon-grotesque-bold";
+    font-size: 30px;
+    border-bottom: 1px solid #d83f87;
+    
+}
+
+.inpHolder .inp input[type=text]+label{
+    font-family: "brandon-grotesque-bold";
+    color: #d83f87;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    font-size: 30px;
+    transition: all linear 0.2s;
+}
+
+.inpHolder .inp input[type=text]:focus+label,
+.inpHolder .inp input[type=text].active+label{
+    top: -25px;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: all linear 0.2s;
+}
+
+
+.inpHolder input[type=submit]{
+    -webkit-appearance: none;
+    border: 1px solid #d83f87;
+    color: #d83f87;
+    padding: 5px 20px;
+    display: block;
+    float: right;
+    margin-top: 50px;
+    font-family: "brandon-grotesque-bold";
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.contact .inpHolder .inp input[type=text]{
+    border-bottom: 1px solid #FFF;
+}
+.contact .inpHolder .inp input[type=text]+label{
+    color: #FFF;
+}
+.contact .inpHolder  input[type=submit]{
+    border-color: #FFF;
+    color: #FFF;
+}
+
+
+.contact .form p{
+    margin-top: 30px;
+    font-size: 30px;
+    color: #FFF;
+}
+.contact .inpHolder{
+    width: 33%;
+    display: inline-block;
+    text-align: right;
+
+}
+
+.contact .inpHolder .inp{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+@media (max-width:600px){
+    .form p{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 30px;
+    
+    }
+    input[type=submit]{
+        width: 100%;
+    }
+    .contact .inpHolder,
+    .inpHolder{
+        width: calc( 100% - 40px );
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+    }
+    .inpHolder .inp{
+        width: 100%;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+}
+
+.contact{
+    background-color: #d83f87;
+    text-align: center;
+}
+.contact a{
+    color: #FFF;
+    font-size: 40px;
+    display: inline-block;
+    margin: auto;
+    margin-right: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.event{
+    margin-bottom: 100px;
+}
+
+.clear{
+    display: block;
+    clear: both;
+    height: 0px;
+}
+
+.event .btnmore{
+    background-color: #fde7e1;
+    padding: 20px 4px;
+    display: inline-block;
+    width: 300px;
+    margin-top: 30px;
+    color: #212121;
+
+}
+
+
+.event .big{
+    width: 100%;
+    background-position: center ;
+    background-size: cover;
+    height: 60vh;
+}
+
+.event .half{
+    width: 50%;
+    float: left;
+    background-position: center ;
+    background-size: cover;
+    height: 40vh;
+}
+
+.event .lnk{
+    position: relative;
+}
+.event .lnk span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top:calc( 50% - 20px );
+    font-size: 30px;
+    color: #FFF;
+    font-family: "brandon-grotesque-bold";
+    z-index: 10000;
+    opacity: 0;
+    transition: all linear 0s;
+}
+.event .lnk:hover span{
+    opacity: 1;
+    transition: all linear 0.2s 0.2s;
+}
+.event .lnk:after{
+    content: "";
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    transition: all linear 0.1s;
+}
+
+.event .lnk:hover:after{
+    background-color: rgba(0,0,0,0.7);
+    transition: all linear 0.2s;
+}
+
+section.menu .abrir,
+section.menu .cerrar{
+    display: none;
+}
+
+.moreG{
+    display: none;
+}
+
+.overgallery{
+    position: fixed;
+    z-index: 10000000;
+    top: 20px;
+    bottom: 0px;
+    width: calc(100%);
+    left: 0px;
+    display: none;
+}
+
+.cnt{
+    width: calc( 100% - 200px );
+    top: 100px;
+    left: 100px;
+    bottom: 100px;
+    position: fixed;
+    background-color: #f1f1f1;
+    z-index: 10000000;
+}
+.closeOverGallery{
+    background-color: #FFF;
+    width: 40px;
+    height: 40px;
+    z-index: 100000000;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+}
+.closeOverGallery::before,
+.closeOverGallery::after{
+    height: 30px;
+    width: 2px;
+    background-color: #222;
+    content: "";
+    z-index: 1000000000;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+.closeOverGallery::before{
+    transform: rotate(45deg);
+}
+.closeOverGallery::after{
+    transform: rotate(-45deg);
+}
+
+
+.cnt .main{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    padding: 0px;
+    bottom: 0;
+    text-align: center;
+}
+.cnt .main .imgMain{
+    /* max-height: 100%; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    margin: auto;
+}
+.cnt .main .txt{
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 40px;
+    left: 0px;
+    text-align: left;
+    width: 80%;
+    font-size: 40px;
+    color: #FFF;
+}
+.cnt .main h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.cnt .main p{
+    font-size: 20px;
+}
+.overgallery .bg{
+    background-color: rgba(216, 63, 135, 1);
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000000;
+}
+
+.overgallery .cnt .other{
+    position: absolute;
+    bottom: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    left: 0px;
+    text-align: left;
+    top: 85%;
+    max-height: 15%;
+    width: 100%;
+    background-color: #000;
+}
+
+
+@media (min-width:600px){
+    
+    .overgallery .cnt .other,
+    .overgallery .cnt .txt{
+        opacity: 0;
+        transition: opacity linear 0.2s;
+    }
+
+    .overgallery .cnt:hover .other,
+    .overgallery .cnt:hover .txt{
+        opacity: 1;
+        transition: opacity linear 0.2s;
+    }
+}
+
+@media (max-width:600px){
+    .overgallery .cnt{
+        left: 0px;
+        bottom: 0px;
+        top: 0px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+.hold{
+    width: 200%;
+}
+
+.overgallery .cnt .other a{
+    max-height: calc( 100% - 40px );
+    display: inline-block;
+    margin: 20px 10px;
+}
+.overgallery .cnt .other a img{
+    height: 100%;
+    opacity: 0.5;
+    transition: all linear 0.2s;
+}
+.overgallery .cnt .other a:hover img{
+    opacity: 1;
+    transition: all linear 0.2s;
+}
+
+@media (max-width:600px){
+    section.menu {
+        background-color: #d83f87;
+        display: inline-block;
+        width: 100%;
+        position:  fixed;
+        padding: 5px 10px;
+        top: 0px;
+        max-height: 50px;
+        left: 0px;
+        max-width: calc( 100% - 20px );
+        text-align: center;
+        z-index: 1000000;
+    }
+    .contact a{
+        font-size: 30px;
+    }
+
+
+section.menu ul {
+    position: fixed;
+    margin: 0px;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    padding: 20px;
+    z-index: 100;
+    opacity: 0;
+    background-color: #FFF;
+
+}
+section.menu .abrir{
+    display: block;
+    float: right;
+    
+    line-height: 50px;
+    font-size: 40px;
+    color: #FFF;
+
+}
+
+section.menu.rb ul {
+    display: inline-block;   
+    left: 0px;
+    opacity: 1;
+}
+
+input{
+    border-radius: 0px;
+}
+
+section.menu ul li{
+    font-family: "brandon-grotesque-bold";
+    font-size: 50px;
+    width: 100%;
+    float: left;
+    line-height: 60px;
+    color: #d83f87;
+    display: block;
+    margin-right: 0px;
+}
+
+section.menu .cerrar{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    font-family: "brandon-grotesque-bold";
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    line-height: 60px;
+    color: #150027;
+    display: none;
+    margin-right: 0px;
+}
+
+section.menu.rb .cerrar{
+    display: block;
+}
+
+
+
+section.menu img {
+    width: 45px;
+    margin: 0px;
+    margin-left: 0px;
+    float: left;
+}
+    section.hero {
+        min-height: 100px;
+        max-height: 400px;
+        padding-bottom: 100px;
+    }
+    .menu ul li {
+        font-size: 12px;
+    }
+    body{
+        padding-top: 50px;
+    }
+    section.more{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .more img{
+        margin: auto;
+        width: 80%;
+    }   
+
+    section.intro{
+        width: 100%;
+        margin-top: 0px;
+        padding: 0px;
+        margin-left: 0px;
+    }
+    section.intro .video{
+        height: 200px;
+    }
+    section.intro p{
+        max-width: 100%;
+        padding: 20px;
+        font-size: 16px;
+    }
+    .event .big{
+        height: 40vh;
+    }
+    .event .half{
+        height: 40vh;
+    }
+
+    .event .half .half{
+        height: 20vh;
+        width: 100%;
+    }
+}

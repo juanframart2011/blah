@@ -1,0 +1,37 @@
+.event-title{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%
+}
+.head-small{
+    left: 0%;
+    position: absolute;
+    top: 30%;
+    z-index: 2;
+}
+.inpHolder label{
+    font-family: "brandon-grotesque-bold";
+    color: #d83f87;
+    left: 0px;
+    font-size: 30px;
+    transition: all linear 0.2s;
+}
+.inpHolder button, button{
+    -webkit-appearance: none;
+    border: 1px solid #d83f87 !important;
+    color: #d83f87 !important;
+    padding: 5px 20px !important;
+    font-family: "brandon-grotesque-bold";
+    background-color: transparent;
+    font-size: 20px;
+}
+.navbar-default .logo{
+	background: black;
+}
+.navbar-toggle{
+    float: inherit;
+}
+.video{
+    margin-top: -10%;
+}
